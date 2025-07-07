@@ -1,0 +1,24 @@
+<h2>User Registration</h2>
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  <label>
+    Name:
+    <input type="text" name="name" ngModel required />
+  </label>
+  <br /><br />
+
+  <label>
+    Email:
+    <input type="email" name="email" ngModel required />
+  </label>
+  <br /><br />
+
+  <label>
+    Age:
+    <input type="number" name="age" ngModel />
+  </label>
+  <br /><br />
+
+  <button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>
+
